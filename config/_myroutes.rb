@@ -30,3 +30,4 @@ new_user_product GET    /users/:user_id/products/new(.:format)   products#new
      new_product GET    /products/new(.:format)                  products#new
          product GET    /products/:id(.:format)                  products#show
                  DELETE /products/:id(.:format)                  products#destroy
+    
