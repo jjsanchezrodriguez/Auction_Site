@@ -8,7 +8,30 @@
 
 puts("Creating User")
 puts("=================")
-  20.times do |time|
-    p = User.create(name: Faker::Name.name ,  email:Faker::Internet.email )
+ 10.times do |time|
+    User.create(name: Faker::Name.name ,  email:Faker::Internet.email )
+ end
+
+ puts("Creating Product")
+ puts("=================")
+ 20.times do
+     Product.create(
+         title: Faker::Commerce.product_name,
+         description:  Faker::Lorem.sentence,
+         deadline: Faker::Date.backward(14),
+         user_id: Faker::Number.between(1, 10)
+         )
   end
+
+  puts("Creating Bid")
+  puts("=================")
+  20.times do
+    Bid.create(amount: Faker::Number.between(1, 100),
+      user_id: Faker::Number.between(1, 10),
+      product_id: Faker::Number.between(1, 20)
+      )
+  end
+
+
+
 puts(" => Projects created √")
