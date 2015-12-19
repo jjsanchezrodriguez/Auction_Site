@@ -27,8 +27,8 @@ puts("=================")
   puts("=================")
   20.times do
     Bid.create(amount: Faker::Number.between(1, 100),
-      user_id: Faker::Number.between(1, 10),
-      product_id: Faker::Number.between(1, 20)
+      user_id: Faker::Number.between(1, 5),
+      product_id: Faker::Number.between(1, 5)
       )
   end
 

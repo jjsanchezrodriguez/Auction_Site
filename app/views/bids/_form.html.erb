@@ -1,0 +1,15 @@
+
+<%= form_tag(product_bids_path(@product.id), method: "post") do %>
+  
+  <%= label_tag("amount") %>
+  <%= text_field_tag(:amount) %> 
+
+  <%= label_tag("email") %>
+  <%= text_field_tag(:email) %>
+  
+  <%= submit_tag("Bid") %>
+<% end %>
+
+
+
+

@@ -1,4 +1,22 @@
 <p> Name: <%=@product.title%></p>
 <p> Description: <%=@product.description%></p>
-<p> Fecha de Limite<%=@product.deadline%></p>
+<p> Fecha de Limite: <%=@product.deadline%></p>
 <p> User_id: <%=@product.user_id%></p>
+
+
+  <ul>
+    <% @bids.each do |bid|%>
+      <li>                
+          Cantidad : <%= bid.amount %>
+          Usuario:  <%= bid.name %>
+      </li>
+    <% end %>
+  </ul>
+ 
+  <%=render "bids/form"%>
+
+  <%= link_to("Volver", products_path) %>
+ 
+ 
+
+
